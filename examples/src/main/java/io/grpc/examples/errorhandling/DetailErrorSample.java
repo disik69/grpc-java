@@ -73,7 +73,7 @@ public class DetailErrorSample {
   private ManagedChannel channel;
 
   void run() throws Exception {
-    Server server = ServerBuilder.forPort(0).addService(new GreeterGrpc.GreeterImplBase() {
+    Server server = ServerBuilder.forPort(50051).addService(new GreeterGrpc.GreeterImplBase() {
       @Override
       public void sayHello(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
         Metadata trailers = new Metadata();
